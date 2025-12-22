@@ -3,13 +3,6 @@ package core.basesyntax;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import strategy.BalanceOperation;
-import strategy.OperationHandler;
-import strategy.OperationStrategy;
-import strategy.OperationStrategyImpl;
-import strategy.PurchaseOperation;
-import strategy.ReturnOperation;
-import strategy.SupplyOperation;
 import service.DataConverter;
 import service.DataConverterImpl;
 import service.FileReader;
@@ -20,6 +13,13 @@ import service.ReportGenerator;
 import service.ReportGeneratorImpl;
 import service.ShopService;
 import service.ShopServiceImpl;
+import strategy.BalanceOperation;
+import strategy.OperationHandler;
+import strategy.OperationStrategy;
+import strategy.OperationStrategyImpl;
+import strategy.PurchaseOperation;
+import strategy.ReturnOperation;
+import strategy.SupplyOperation;
 
 public class Main {
     public static void main(String[] arg) {
