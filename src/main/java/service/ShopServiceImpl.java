@@ -2,7 +2,7 @@ package service;
 
 import core.basesyntax.FruitTransaction;
 import java.util.List;
-import operationwithfruits.OperationStrategy;
+import strategy.OperationStrategy;
 
 public class ShopServiceImpl implements ShopService {
     private OperationStrategy operationStrategy;

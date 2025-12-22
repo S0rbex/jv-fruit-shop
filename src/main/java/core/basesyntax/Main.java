@@ -3,13 +3,13 @@ package core.basesyntax;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import operationwithfruits.BalanceOperation;
-import operationwithfruits.OperationHandler;
-import operationwithfruits.OperationStrategy;
-import operationwithfruits.OperationStrategyImpl;
-import operationwithfruits.PurchaseOperation;
-import operationwithfruits.ReturnOperation;
-import operationwithfruits.SupplyOperation;
+import strategy.BalanceOperation;
+import strategy.OperationHandler;
+import strategy.OperationStrategy;
+import strategy.OperationStrategyImpl;
+import strategy.PurchaseOperation;
+import strategy.ReturnOperation;
+import strategy.SupplyOperation;
 import service.DataConverter;
 import service.DataConverterImpl;
 import service.FileReader;
@@ -25,7 +25,7 @@ public class Main {
     public static void main(String[] arg) {
 
         FileReader fileReader = new FileReaderImpl();
-        List<String> inputReport = fileReader.read("src\\main\\java\\db\\fruits.csv");
+        List<String> inputReport = fileReader.read("src/main/java/db/fruits.csv");
 
         DataConverter dataConverter = new DataConverterImpl();
 
@@ -45,7 +45,7 @@ public class Main {
         String resultingReport = reportGenerator.getReport();
 
         FileWriter fileWriter = new FileWriterImpl();
-        fileWriter.write(resultingReport, "src\\main\\java\\db\\finalReport.csv");
+        fileWriter.write(resultingReport, "src/main/java/db/finalReport.csv");
 
         System.out.println("Report generated successfully!");
     }

@@ -1,4 +1,4 @@
-package operationwithfruits;
+package strategy;
 
 import core.basesyntax.FruitTransaction;
 import db.Storage;

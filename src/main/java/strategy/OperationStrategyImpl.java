@@ -1,4 +1,4 @@
-package operationwithfruits;
+package strategy;
 
 import core.basesyntax.FruitTransaction;
 import java.util.Map;
