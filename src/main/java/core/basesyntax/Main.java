@@ -27,7 +27,6 @@ public class Main {
 
     public static void main(String[] arg) {
 
-
         FileReader fileReader = new FileReaderImpl();
         List<String> inputReport = fileReader.read(FILE_PATH_FROM);
 
