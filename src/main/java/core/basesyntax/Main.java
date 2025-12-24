@@ -22,10 +22,14 @@ import strategy.ReturnOperation;
 import strategy.SupplyOperation;
 
 public class Main {
+    private static final String FILE_PATH_FROM = "src/main/java/resources/fruits.csv";
+    private static final String FILE_PATH_TO = "src/main/java/resources/finalReport.csv";
+
     public static void main(String[] arg) {
 
+
         FileReader fileReader = new FileReaderImpl();
-        List<String> inputReport = fileReader.read("src/main/java/db/fruits.csv");
+        List<String> inputReport = fileReader.read(FILE_PATH_FROM);
 
         DataConverter dataConverter = new DataConverterImpl();
 
@@ -45,7 +49,7 @@ public class Main {
         String resultingReport = reportGenerator.getReport();
 
         FileWriter fileWriter = new FileWriterImpl();
-        fileWriter.write(resultingReport, "src/main/java/db/finalReport.csv");
+        fileWriter.write(resultingReport, FILE_PATH_TO);
 
         System.out.println("Report generated successfully!");
     }

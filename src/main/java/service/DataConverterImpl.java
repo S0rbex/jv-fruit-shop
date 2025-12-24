@@ -11,10 +11,10 @@ public class DataConverterImpl implements DataConverter {
         for (int i = 1; i < lines.size(); i++) {
             String line = lines.get(i);
             String[] split = line.split(",");
-            String operationCode = split[0].trim();
+            String operationCode = split[0];
             FruitTransaction.Operation op = FruitTransaction.Operation.fromCode(operationCode);
-            String fruitName = split[1].trim();
-            int amount = Integer.parseInt(split[2].trim());
+            String fruitName = split[1];
+            int amount = Integer.parseInt(split[2]);
 
             transactions.add(new FruitTransaction(op, fruitName, amount));
         }
